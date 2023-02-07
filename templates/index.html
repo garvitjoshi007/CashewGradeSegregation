@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/dropzone.min.css') }}">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body class="body">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Hey There!</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.rvce.edu.in/" target="_blank">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+      </div>
+    </div>
+  </nav>
+  <h1>Welcome to the Cashew Image Processing Website!</h1>
+  <div id="w180tag" data-player="W180">W180</div>
+  <div id="w240tag" data-player="W240">W240</div>
+  <div id="defecttag" data-player="Defect">Defect</div>
+  <div class="tenor-gif-embed" data-postid="15019766" data-share-method="host" data-aspect-ratio="1.35021"
+    data-width="30%"><a href="https://tenor.com/view/shk-simple-happy-kitchen-cashew-vegan-go-vegan-gif-15019766">Shk
+      Simple Happy Kitchen GIF</a>from <a href="https://tenor.com/search/shk-gifs">Shk GIFs</a>
+  </div>
+  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  <!-- <div class="container" id="imgbox">
+    <form action="http://localhost:5000/upload" enctype="multipart/form-data" method="POST">
+      <input type="file" name="pic" accept="image/*" class="form-control" id="inputGroupFile02" onchange="loadfile(event)"/>
+      <input type="submit" value="Upload a file"/>
+  </form>
+  </div> -->
+  <div class="col-12 mx-auto">
+    <form action="/file-upload" class="dropzone" id="dropzone">
+      <div class="dz-message needsclick">
+        <!-- <img src="upload.png" width="50vw" height="50vw"><br> -->
+        <span class="note needsclick">Drop files here or click to upload</span>
+      </div>
+    </form>
+  </div>
+  <div class="outputimg">
+    <img id="output" width="200" />
+  </div>
+  <div class="row mt-3">
+    <div class="col-3 mx-auto">
+        <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
+    </div>
+</div>
+  <div class="col-sm-8 error" id="error">
+    <p>Can't classify image. Classifier was not able to detect face and two eyes properly</p>
+  </div>
+  <div id="resultHolder">
+    Hello I hold results.
+  </div>
+  <div class="probtable" id="divClassTable">
+    <table class="table" id="classTable">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Cashew Type</th>
+          <th scope="col">Probability Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>W180</td>
+          <td id="score_W180"></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>W240</td>
+          <td id="score_W240"></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Defect</td>
+          <td id="score_Defect"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script type="text/javascript" src="{{ url_for('static', filename='dropzone.min.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='myScript.js') }}"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  
+
+</body>
+
+</html>

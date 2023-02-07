@@ -1,0 +1,97 @@
+.body {
+    background-color: #fffbf0;
+  }
+
+h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: turquoise;
+}
+
+.containform {
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.tenor-gif-embed {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropzone {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width:10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#submitBtn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+#resultHolder {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 40%;
+    margin-right: 40%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: turquoise;
+    text-align: center;
+}
+
+/*.probtable {
+    margin-top: 10px;
+    border: 1px solid black;  
+    margin-left: 400px;
+    margin-right: 400px;
+    text-align:left;
+}*/
+
+.outputimg {
+    margin-left: 45%;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.error {
+    font-family: MerriweatherRegular;
+    font-size: 30px;
+    line-height: initial;
+    color: blue;
+    text-align: center;
+  }
+  
+  #classTable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #classTable td, #classTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #classTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+
