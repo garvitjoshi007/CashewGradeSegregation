@@ -65,7 +65,6 @@ numpy==1.21.5
 oauthlib==3.2.0
 olefile==0.46
 packaging==21.3
-pandas==1.5.3
 paramiko==2.9.3
 pexpect==4.8.0
 Pillow==9.0.1
