@@ -24,7 +24,7 @@ db.init_app(app)'''
     name = db.Column(db.Text,nullable=False)
     mimetype = db.Column(db.Text,nullable=False)'''
 
-@app.route('/')
+@app.route('/',methods=['GET', 'POST'])
 def hello_world():
     return render_template("index.html")
 
