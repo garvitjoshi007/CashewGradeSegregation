@@ -2,9 +2,11 @@ from flask import Flask,request,jsonify,render_template,Response
 import util
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import secure_filename
+from flask_cors import CORS
 import base64
 
 app = Flask(__name__)
+CORS(app)
 
 
 # configure the SQLite database, relative to the app instance folder
@@ -29,6 +31,7 @@ def hello_world():
     return render_template("index.html")
 
 @app.route('/classify_image',methods=['GET','POST'])
+#@cross_origin()
 def classify_image():
     image_data = request.form['image_data']
     #img = db.session.query(Img).order_by(Img.id.desc()).first()
