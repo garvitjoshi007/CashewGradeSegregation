@@ -6,7 +6,7 @@ from flask_cors import cross_origin,CORS
 import base64
 
 app = Flask(__name__)
-cors = CORS(app)
+CORS(app)
 
 
 
@@ -38,7 +38,7 @@ def classify_image():
     #img = db.session.query(Img).order_by(Img.id.desc()).first()
     #image_data = img.img
     response = jsonify(util.classify_image(image_data))
-    #response.headers.add('Access-Control-Allow-Origin','*')
+    response.headers.add('Access-Control-Allow-Origin','*')
     return response
 
 
