@@ -2,10 +2,12 @@ from flask import Flask,request,jsonify,render_template,Response
 import util
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import secure_filename
-from flask_cors import cross_origin
+from flask_cors import cross_origin,CORS
 import base64
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 # configure the SQLite database, relative to the app instance folder
@@ -26,6 +28,7 @@ db.init_app(app)'''
     mimetype = db.Column(db.Text,nullable=False)'''
 
 @app.route('/',methods=['GET', 'POST'])
+@cross_origin()
 def hello_world():
     return render_template("index.html")
 
