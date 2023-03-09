@@ -10,6 +10,7 @@ cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 
+
 # configure the SQLite database, relative to the app instance folder
 '''app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///ipml.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"]= False
@@ -39,7 +40,7 @@ def classify_image():
     #img = db.session.query(Img).order_by(Img.id.desc()).first()
     #image_data = img.img
     response = jsonify(util.classify_image(image_data))
-    response.headers.add('Access-Control-Allow-Origin','*')
+    #response.headers.add('Access-Control-Allow-Origin','*')
     return response
 
 
