@@ -6,7 +6,7 @@ from flask_cors import cross_origin,CORS
 import base64
 
 app = Flask(__name__)
-CORS(app)
+cors = CORS(app)
 
 
 
@@ -29,7 +29,6 @@ db.init_app(app)'''
     mimetype = db.Column(db.Text,nullable=False)'''
 
 @app.route('/',methods=['GET', 'POST'])
-
 def hello_world():
     return render_template("index.html")
 
