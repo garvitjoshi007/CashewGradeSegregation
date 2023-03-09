@@ -6,8 +6,8 @@ from flask_cors import cross_origin,CORS
 import base64
 
 app = Flask(__name__)
-cors = CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
+CORS(app)
+
 
 
 
@@ -29,12 +29,11 @@ db.init_app(app)'''
     mimetype = db.Column(db.Text,nullable=False)'''
 
 @app.route('/',methods=['GET', 'POST'])
-@cross_origin()
+
 def hello_world():
     return render_template("index.html")
 
 @app.route('/classify_image',methods=['GET','POST'])
-@cross_origin()
 def classify_image():
     image_data = request.form['image_data']
     #img = db.session.query(Img).order_by(Img.id.desc()).first()
